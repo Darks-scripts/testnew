@@ -12,7 +12,7 @@ local Section = darkTab:AddSection({
 
 darkTab:AddToggle({
 	Name = "dark",
-	Default = false,
+	Default = true,
 	Callback = function(Value)
 		task.wait(10)
 local Workspace = game:GetService("Workspace")
@@ -55,9 +55,10 @@ teleportToFuseMachine()
 	end    
 })
 
+
 darkTab:AddToggle({
 	Name = "dark",
-	Default = false,
+	Default = true,
 	Callback = function(Value)
 		task.wait(10)
 local Workspace = game:GetService("Workspace")
