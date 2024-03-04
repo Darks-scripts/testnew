@@ -55,8 +55,17 @@ teleportToFuseMachine()
 	end    
 })
 
+local DarkTab = Window:MakeTab({
+	Name = "dark",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = DarkTab:AddSection({
+	Name = "Section"
+})
 
-darkTab:AddToggle({
+
+DarkTab:AddToggle({
 	Name = "dark",
 	Default = true,
 	Callback = function(Value)
