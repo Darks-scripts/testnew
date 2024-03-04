@@ -8,6 +8,18 @@ local MainTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local DarkTab = Window:MakeTab({
+	Name = "Tab 1",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
 
 MainTab:AddToggle({
 	Name = "Next world auto buy",
@@ -628,5 +640,13 @@ MainTab:AddToggle({
 	Callback = function(Value)
 		task.wait(115)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(669.154541, 16.2359428, 1083.06812, -0.458277345, -9.89286377e-08, 0.888809264, -2.93006899e-08, 1, 9.6197013e-08, -0.888809264, 1.80421882e-08, -0.458277345)
+	end    
+})
+
+DarkTab:AddToggle({
+	Name = "This is a toggle!",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
 	end    
 })
