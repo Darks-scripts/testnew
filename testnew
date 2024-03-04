@@ -1,111 +1,265 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-local darkTab = Window:MakeTab({
-	Name = "dark",
+
+local MainTab = Window:MakeTab({
+	Name = "Tab 1",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-local Section = darkTab:AddSection({
-	Name = "Section"
-})
 
-darkTab:AddToggle({
-	Name = "dark",
+MainTab:AddToggle({
+	Name = "Auto tp",
 	Default = true,
 	Callback = function(Value)
-		task.wait(10)
-local Workspace = game:GetService("Workspace")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Library = ReplicatedStorage:WaitForChild("Library")
-local LocalPlayer = game:GetService("Players").LocalPlayer
-
-local function teleportToFuseMachine()
-    local zonePath
-    local teleported = false
-    while not teleported do
-        for _, v in pairs(Workspace.Map:GetChildren()) do
-            zonePath = game:GetService("Workspace").Map["1 | Spawn"]
-            LocalPlayer.Character.HumanoidRootPart.CFrame = zonePath.PERSISTENT.Teleport.CFrame
-            teleported = true
-            break
-        end
-        task.wait()
-    end
-
-    if not zonePath:FindFirstChild("INTERACT") then
-        local loaded = false
-        local detectLoad = zonePath.ChildAdded:Connect(function(child)
-            if child.Name == "INTERACT" then
-                loaded = true
-            end
-        end)
-
-        repeat
-            task.wait()
-        until loaded
-
-        detectLoad:Disconnect()
-    end
-
-    LocalPlayer.Character.HumanoidRootPart.CFrame = zonePath.INTERACT.Machines.FuseMachine.PadGlow.CFrame
-end
-
-teleportToFuseMachine()
+		task.wait(90)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(206.342972, 16.2373466, -203.258301, 0.244790331, -1.03372585e-07, -0.969576061, 8.08776779e-09, 1, -1.0457434e-07, 0.969576061, 1.77570811e-08, 0.244790331)
 	end    
 })
 
-local DarkTab = Window:MakeTab({
-	Name = "dark",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-local Section = DarkTab:AddSection({
-	Name = "Section"
-})
-
-
-DarkTab:AddToggle({
-	Name = "dark",
+MainTab:AddToggle({
+	Name = "Auto tp",
 	Default = true,
 	Callback = function(Value)
-		task.wait(10)
-local Workspace = game:GetService("Workspace")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Library = ReplicatedStorage:WaitForChild("Library")
-local LocalPlayer = game:GetService("Players").LocalPlayer
-
-local function teleportToFuseMachine()
-    local zonePath
-    local teleported = false
-    while not teleported do
-        for _, v in pairs(Workspace.Map:GetChildren()) do
-            zonePath = game:GetService("Workspace").Map["2 | Colorful Forest"]
-            LocalPlayer.Character.HumanoidRootPart.CFrame = zonePath.PERSISTENT.Teleport.CFrame
-            teleported = true
-            break
-        end
-        task.wait()
-    end
-
-    if not zonePath:FindFirstChild("INTERACT") then
-        local loaded = false
-        local detectLoad = zonePath.ChildAdded:Connect(function(child)
-            if child.Name == "INTERACT" then
-                loaded = true
-            end
-        end)
-
-        repeat
-            task.wait()
-        until loaded
-
-        detectLoad:Disconnect()
-    end
-
-    LocalPlayer.Character.HumanoidRootPart.CFrame = zonePath.INTERACT.Machines.FuseMachine.PadGlow.CFrame
-end
-
-teleportToFuseMachine()
+		task.wait(180)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(372.835358, 16.2373447, -206.354507, -0.981769204, 1.34713334e-08, 0.190076828, 2.09964579e-08, 1, 3.75760862e-08, -0.190076828, 4.08819822e-08, -0.981769204)
 	end    
 })
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(360)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(526.909912, 16.237339, -203.72496, -0.251476586, -9.10000537e-08, -0.967863381, 2.27540458e-08, 1, -9.99336933e-08, 0.967863381, -4.71537902e-08, -0.251476586)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(720)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(681.99231, 16.2373466, -206.612625, -0.65154767, 1.55391131e-08, 0.758607686, -3.17833511e-08, 1, -4.77815902e-08, -0.758607686, -5.52430777e-08, -0.65154767)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(1440)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(849.001404, 16.237339, -179.789536, 0.0871113613, 3.65180797e-09, 0.996198595, -6.66730005e-10, 1, -3.60744168e-09, -0.996198595, -3.4994635e-10, 0.0871113613)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(2880)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(842.828491, 16.2373466, -8.06886292, -0.0501307733, 6.73714808e-08, -0.99874264, -2.48892551e-08, 1, 6.87055888e-08, 0.99874264, 2.83022263e-08, -0.0501307733)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(5760)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(703.433777, 16.2298374, 27.8789577, 0.999967039, 4.0015621e-08, -0.00811748486, -4.03562019e-08, 1, -4.17927595e-08, 0.00811748486, 4.21189732e-08, 0.999967039)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(11520)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540.394287, 16.2373543, 26.571888, -0.344873875, -1.13855151e-07, 0.938649058, -3.63644084e-08, 1, 1.07935996e-07, -0.938649058, 3.09088732e-09, -0.344873875)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(23040)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(384.298279, 16.2371807, 27.047451, -0.999029756, 4.51668818e-08, 0.044040639, 4.81766023e-08, 1, 6.72781653e-08, -0.044040639, 6.9334618e-08, -0.999029756)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(46080)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(212.892929, 16.237339, 49.8633881, -0.981681943, -6.06990298e-08, 0.190527171, -5.38036602e-08, 1, 4.13639114e-08, -0.190527171, 3.0355146e-08, -0.981681943)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(92160)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(216.894424, 16.2373466, 230.240402, -0.942545652, 3.42947359e-08, 0.334077328, 1.19449988e-08, 1, -6.89541793e-08, -0.334077328, -6.10019057e-08, -0.942545652)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(184320)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(373.433716, 16.2373466, 262.106079, 0.621543527, -2.69650577e-08, 0.783379614, 2.91781599e-10, 1, 3.4189938e-08, -0.783379614, -2.10219593e-08, 0.621543527)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(368640)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(517.863831, 16.2373543, 263.3685, -0.0214149784, 1.83669986e-08, -0.999770701, -1.1720247e-09, 1, 1.83963156e-08, 0.999770701, 1.56571256e-09, -0.0214149784)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(737280)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(689.934448, 16.237339, 261.335785, 0.0153699517, 1.01413619e-07, -0.999881864, -1.76674977e-08, 1, 1.01154015e-07, 0.999881864, 1.6110679e-08, 0.0153699517)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(1474560)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(854.383789, 16.2373543, 293.720978, -0.482840985, -4.3159627e-08, -0.875708044, 7.30988559e-09, 1, -5.33158726e-08, 0.875708044, -3.21444134e-08, -0.482840985)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(2949120)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(845.89978, 16.2373524, 463.230042, -0.987393737, 2.62255568e-08, -0.158283338, 3.64936845e-08, 1, -6.19653164e-08, 0.158283338, -6.696051e-08, -0.987393737)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(5898240)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(691.729553, 16.2373466, 493.088531, -0.0552617759, -8.67312195e-08, 0.998471916, -3.68528119e-09, 1, 8.66599947e-08, -0.998471916, 1.10933529e-09, -0.0552617759)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(11796480)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(538.303955, 16.2373543, 497.803802, -0.0563857257, -7.1916574e-08, 0.998409033, 2.98946623e-09, 1, 7.22000024e-08, -0.998409033, 7.05575998e-09, -0.0563857257)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(23592960)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(369.081421, 16.2373543, 505.960175, 0.186293527, -4.13169694e-08, 0.982494116, -5.59641355e-09, 1, 4.31142979e-08, -0.982494116, -1.35303582e-08, 0.186293527)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(47185920)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(216.035873, 16.2373466, 500.533813, 0.709094167, 1.90308693e-08, 0.705113769, 3.46235964e-08, 1, -6.18088336e-08, -0.705113769, 6.82418602e-08, 0.709094167)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(94371840)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(216.882507, -31.515007, 752.656555, -0.998055279, -0.00164128735, 0.0623132363, -0.00164015614, 0.999998629, 6.93056354e-05, -0.0623132661, -3.3032582e-05, -0.99805665)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(188743680)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(360.705872, -31.2173958, 780.146118, -0.485914588, 0.000221291048, -0.874006271, -2.64734922e-06, 0.99999994, 0.000254663435, 0.874006271, 0.000126058483, -0.485914588)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(377487360)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(528.550293, -30.2483902, 785.679932, -0.577839434, 0.000707804633, -0.816150129, 0.0122637078, 0.999894261, -0.00781562645, 0.816058278, -0.0145252049, -0.577787042)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(754974720)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(802.406189, 16.2373219, 788.189453, 0.0479456931, 8.00986015e-08, -0.998849928, 1.89348874e-08, 1, 8.10997207e-08, 0.998849928, -2.28014922e-08, 0.0479456931)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(1509949440)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(968.381409, 16.23736, 801.757324, 0.152447045, 4.08895033e-08, 0.988311648, 1.55420903e-08, 1, -4.37704557e-08, -0.988311648, 2.20331042e-08, 0.152447045)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(3019898880)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(970.921875, 16.2373524, 969.96167, -1, 1.84647497e-09, -0.000210657498, 1.86537052e-09, 1, -8.96970676e-08, 0.000210657498, -8.96974583e-08, -1)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(6039797760)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(834.74939, 16.2373486, 1018.01849, 0.796274662, 7.34779251e-11, 0.604935288, 4.9833826e-10, 1, -7.77425402e-10, -0.604935288, 9.2050656e-10, 0.796274662)
+	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(12079595520)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(669.154541, 16.2359428, 1083.06812, -0.458277345, -9.89286377e-08, 0.888809264, -2.93006899e-08, 1, 9.6197013e-08, -0.888809264, 1.80421882e-08, -0.458277345)
+	end    
+})
+
+
+end
+OrionLib:Init()
