@@ -1,11 +1,43 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-
 local MainTab = Window:MakeTab({
 	Name = "Tab 1",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+})
+
+MainTab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		while true do
+game:GetService("ReplicatedStorage").Network.Pets_ToggleFavoriteMode:FireServer()
+wait(60)
+end
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "Pet Equip buy",
+	Callback = function()
+      		print("hello")
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "Next world auto buy",
+	Callback = function()
+      		print("hello")
+  	end    
+})
+
+MainTab:AddToggle({
+	Name = "Auto tp",
+	Default = true,
+	Callback = function(Value)
+		task.wait(5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(206.342972, 16.2373466, -203.258301, 0.244790331, -1.03372585e-07, -0.969576061, 8.08776779e-09, 1, -1.0457434e-07, 0.969576061, 1.77570811e-08, 0.244790331)
+	end    
 })
 
 MainTab:AddToggle({
