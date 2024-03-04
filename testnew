@@ -260,6 +260,4 @@ MainTab:AddToggle({
 	end    
 })
 
-
-end
 OrionLib:Init()
