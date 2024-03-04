@@ -9,20 +9,6 @@ local MainTab = Window:MakeTab({
 })
 
 MainTab:AddToggle({
-	Name = "Next world auto buy",
-	Default = true,
-	Callback = function(Value)
-		while true do
-                local args = {
-    [1] = "Shanty Town"
-}
-
-game:GetService("ReplicatedStorage").Network.Zones_RequestPurchase:InvokeServer(unpack(args))
-            end
-	end    
-})
-
-MainTab:AddToggle({
 	Name = "Auto tp",
 	Default = true,
 	Callback = function(Value)
@@ -264,3 +250,5 @@ MainTab:AddToggle({
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(669.154541, 16.2359428, 1083.06812, -0.458277345, -9.89286377e-08, 0.888809264, -2.93006899e-08, 1, 9.6197013e-08, -0.888809264, 1.80421882e-08, -0.458277345)
 	end    
 })
+
+OrionLib:Init()
