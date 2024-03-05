@@ -7,7 +7,7 @@ local MainTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddButton({
+MainTab:AddButton({
 	Name = "Next world auto buy",
 	Callback = function()
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darks-scripts/Next-world-auto-buy/main/next"))()
