@@ -7,13 +7,11 @@ local MainTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-MainTab:AddToggle({
+Tab:AddButton({
 	Name = "Next world auto buy",
-	Default = true,
-	Callback = function(Value)
-		task.wait(5)
-           loadstring(game:HttpGet("https://raw.githubusercontent.com/Darks-scripts/Next-world-auto-buy/main/next"))()
-	end    
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darks-scripts/Next-world-auto-buy/main/next"))()
+  	end    
 })
 
 MainTab:AddToggle({
